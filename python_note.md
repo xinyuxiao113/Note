@@ -12,3 +12,12 @@ python 3 中的一些注意事项：
 
 (2)可变类型：类似 c++ 的引用传递，如 列表，字典。如 fun（la），则是将 la 真正的传过去，修改后fun外部的la也会受影响
 python 中一切都是对象，严格意义我们不能说值传递还是引用传递，我们应该说传不可变对象和传可变对象。
+
+3.关于import:
+(1)一个.py文件就是一个模块(Module), 当解释器遇到 import 语句，如果模块在当前的搜索路径就会被导入。
+(2)搜索路径是一个解释器会先进行搜索的所有目录的列表.Python解释器的搜索顺序是：
+    (a)当前目录
+    (b)shell变量PYTHONPATH下的每个目录
+    (c)默认路径,UNIX下，默认路径为 /usr/local/lib/python/
+(3)一个模块只会被导入一次，不管你执行了多少次import。这样可以防止导入模块被一遍又一遍地执行。
+See: https://www.runoob.com/python/python-modules.html
