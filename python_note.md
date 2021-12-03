@@ -21,3 +21,13 @@ python 中一切都是对象，严格意义我们不能说值传递还是引用�
     (c)默认路径,UNIX下，默认路径为 /usr/local/lib/python/
 (3)一个模块只会被导入一次，不管你执行了多少次import。这样可以防止导入模块被一遍又一遍地执行。
 See: https://www.runoob.com/python/python-modules.html
+
+4.’*‘在函数赋值中的作用
+https://www.cnblogs.com/lmh001/p/9960300.html
+（1）打包参数
+def f(*args):
+  return args
+*能够将所有位置参数收集形成元组 args
+（2）解包参数
+f(*[a,b,c])能将[a,b,c]解包成 a,b,c
+f(*[a,b,c]) := f(a,b,c)
